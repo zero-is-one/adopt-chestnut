@@ -1,0 +1,25 @@
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#655cf6;color:#fff;font:17px/1.55 "Comic Sans MS","Trebuchet MS",sans-serif}
+.page{min-height:100vh;display:grid;grid-template-columns:180px minmax(0,1fr)}
+.sidebar{background:#ff838b;color:#24143f;border-right:8px ridge #51ef51;border-left:5px solid #fafafa;padding:38px 17px;min-height:100vh;position:sticky;top:0;align-self:start}
+.side-title{font:bold 25px/1.05 Georgia,"Times New Roman",serif;color:#4330a6;margin:0 0 8px}.side-note{font-size:12px;line-height:1.4;margin:0 0 32px;color:#631d50}
+nav{display:flex;flex-direction:column;gap:12px}nav a{color:#331652;font-size:20px;text-decoration:underline;text-underline-offset:3px}nav a:hover,nav a:focus-visible{color:#fff;background:#6d28b5}.side-paw{font-size:52px;margin-top:45px;text-align:center}
+.main-content{min-width:0;padding:24px clamp(18px,5vw,62px) 30px;max-width:1250px;margin:auto;width:100%}
+.welcome{text-align:center}.paw-rule{color:#e8ff25;font:18px/1.4 "Arial Unicode MS","Segoe UI Emoji",sans-serif;letter-spacing:2px;text-align:center;white-space:nowrap;overflow:hidden}
+h1{font:bold clamp(2.5rem,6vw,4.7rem)/1.05 Georgia,"Times New Roman",serif;color:#ffb13b;text-shadow:2px 2px #3b20b0;margin:18px 0 8px}
+h2{color:#ffff32;font:bold clamp(1.55rem,3vw,2.15rem)/1.2 Georgia,"Times New Roman",serif;text-align:center;margin:12px 0}
+.welcome>h2{color:#8cff23;margin:5px auto 17px}.intro{display:flow-root;text-align:left;max-width:920px;margin:0 auto 17px;font-weight:bold}.intro-photo{float:right;width:min(43%,390px);height:280px;object-fit:cover;margin:3px 0 16px 24px;border:3px ridge #b5ff47}.intro p{margin:12px 0}.fee-note{color:#fff}.fee-note strong{font-size:1.25em;color:#ffff36}.apply-link{color:#fff000;font-size:1.15em;font-weight:bold}.phone-note{font-size:15px;font-weight:normal}
+.movies{text-align:center;margin:19px 0 15px}.movies>p{margin:3px 0 15px}.gif-list{display:grid;gap:16px;align-items:start}.featured-gifs{grid-template-columns:repeat(3,minmax(0,1fr));margin:10px 0 22px}.more-gifs{grid-template-columns:repeat(4,minmax(0,1fr));margin:8px 0 18px}.gif-list figure{margin:0;min-width:0}.gif-list img{display:block;width:100%;height:190px;object-fit:cover;background:#4137c5;border:2px ridge #fff}.featured-gifs img{height:250px;border:4px ridge #ffea35}.gif-list figcaption{font:bold 14px Georgia,"Times New Roman",serif;color:#ffff37;padding:5px 2px}.featured-gifs figcaption{font-size:20px;color:#ffeb44;text-shadow:1px 1px #33208c}
+.spotlight-gif{width:min(68%,650px);margin:12px auto 21px}.spotlight-gif figure{margin:0}.spotlight-gif img{display:block;width:100%;height:320px;object-fit:cover;background:#4137c5;border:5px ridge #ffea35}.spotlight-gif figcaption{font:bold 23px Georgia,"Times New Roman",serif;color:#ffff37;padding:7px;text-shadow:1px 1px #33208c}
+.story,.photos{margin:22px auto;text-align:center;max-width:900px}.story p{font-weight:bold}.photo-list{display:flex;justify-content:center;align-items:flex-start;gap:17px;flex-wrap:wrap}.photo-list img{width:min(30%,270px);height:210px;object-fit:cover;border:3px ridge #fff}
+footer{border-top:3px ridge #8dff22;margin-top:24px;padding:15px 0 4px;text-align:center;color:#fff;font-weight:bold}footer a{color:#ffff36}footer .paw-rule{margin-top:14px}
+@media(max-width:760px){.page{grid-template-columns:1fr}.sidebar{position:static;min-height:0;border-right:0;border-bottom:7px ridge #51ef51;padding:15px 18px}.side-title{display:inline-block;font-size:22px;vertical-align:middle;margin-right:18px}.side-note,.side-paw{display:none}nav{display:inline-flex;flex-direction:row;vertical-align:middle;gap:8px 16px;flex-wrap:wrap}nav a{font-size:16px}.main-content{padding:17px 16px 25px}.intro-photo{width:44%;height:230px}.spotlight-gif{width:min(84%,600px)}.spotlight-gif img{height:clamp(245px,52vw,320px)}.featured-gifs{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;max-width:700px;margin-left:auto;margin-right:auto}.featured-gifs img{height:clamp(155px,32vw,230px)}.more-gifs{gap:10px}.more-gifs img{height:clamp(105px,25vw,175px)}}
+@media(max-width:470px){.intro-photo{float:none;width:100%;height:250px;margin:0 0 14px}.spotlight-gif{width:100%}.spotlight-gif img{height:240px}.featured-gifs{grid-template-columns:1fr}.featured-gifs img{height:220px}.more-gifs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Keep every movie frame square while letting the original GIFs stay untouched. */
+.gif-list img,.spotlight-gif img{width:100%;height:auto;aspect-ratio:1 / 1;object-fit:cover}
+.spotlight-gif img{object-position:center top}
+.more-gifs{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px;margin-left:auto;margin-right:auto}
+.more-gifs .movie-five{grid-column:1;grid-row:2}
